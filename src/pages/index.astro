@@ -1,6 +1,5 @@
 ---
 import About from '../components/About/About.astro';
-
 import { mainMenu } from '../components/data/menuData';
 import Footer from '../components/Footer/Footer.astro';
 import Header from '../components/header/Header.astro';
@@ -11,14 +10,12 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Juan Esteban Rendon | Software Developer">
-	<Header origin={mainMenu} />
-	<main class="self-center w-full">
-		<Hero />
-		<About />
-		<Portfolio />
-		<Skills />
-	
-	
-	</main>
-	<Footer/>
+    <Header origin={mainMenu} />
+    <main class="self-center w-full">
+        <Hero />
+        <About />
+        <Portfolio />
+        <Skills />
+    </main>
+    <Footer/>
 </Layout>
