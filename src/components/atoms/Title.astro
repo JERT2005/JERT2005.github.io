@@ -1,0 +1,18 @@
+---
+const { contenido, margin } = Astro.props;
+---
+
+<h2 class="color__gradiente" style=`margin-bottom:${margin}` >{contenido}</h2>
+
+<style>
+	h2 {
+		font-size: 5rem;
+		font-weight: 500;
+		font-family: 'PANTHON';
+	}
+	@media screen and (max-width: 768px) {
+		h2 {
+			text-align: center;
+		}
+	}
+</style>
