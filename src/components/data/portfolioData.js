@@ -13,7 +13,8 @@
 /**
  * @type {PortafolioData[]}
  */
-export const portafolioData = [
+export const portafolioData = 
+[
 	{
 		imgSrc: '/img/yamatechColombia.png',
 		title: 'Yamatech Colombia',
@@ -31,21 +32,13 @@ export const portafolioData = [
 		anim: 'fade-up',
 		averageBrightness: 0.1,
 	},
-	{
-		imgSrc: '/img/ReferenciaLlantaFacil.png',
-		title: 'E-commerce montado',
-		skills: ['wordpress', 'CSS', 'HTML'],
-		descripcion: 'He completado el desarrollo de un e-commerce utilizando WordPress. Este proyecto implica la creación de una tienda en línea funcional y atractiva, utilizando tecnologías como WordPress, HTML y CSS para ofrecer una experiencia de compra fluida y segura para los usuarios.',
-		demoURL: '',
-		repoURL: 'https://llantafacil.co',
-		anim: 'fade-left',
-	},
+	
 	{
 		imgSrc: '/img/AUFINE.png',
 		title: 'Aufine Landing Page',
 		skills: ['Astro', 'CSS', 'JavaScript'],
 		descripcion: 'Actualmente también desarrollando varias landing pages de las marcas de la empresa, una de esas es esta',
-		repoURL: 'https://aufinecolombia.co',
+		repoURL: 'https://aufinecolombia.com',
 		anim: 'fade-right',
 	},
 	{
@@ -53,7 +46,7 @@ export const portafolioData = [
 		title: 'RoyalBlack Landing Page',
 		skills: ['Astro', 'CSS', 'JavaScript'],
 		descripcion: 'Actualmente también desarrollando varias landing pages de las marcas de la empresa, una de esas es esta',
-		repoURL: 'https://royalblackcolombia.co',
+		repoURL: 'https://royalblackcolombia.com',
 		anim: 'fade-left',
 	},
 ];
@@ -63,22 +56,18 @@ const skillIcons = {
 	React: 'skill-icons:react-dark',
 	Astro: 'skill-icons:astro',
 	CSS: 'skill-icons:css',
-	Sass: 'skill-icons:sass',
-	StyledComponents: 'skill-icons:styledcomponents',
-	Bootstrap: 'skill-icons:bootstrap',
 	Tailwind: 'skill-icons:tailwindcss-dark',
 	wordpress: 'skill-icons:wordpress',
 	HTML: 'skill-icons:html',
-	Excel: 'skill-icons:excel',
-	Php: 'skill-icons:php', // Agregado PHP
+	
+
 };
 
 /**
  * @description Se mapea el portafolioData para que tenga los iconos de las habilidades
  */
-export const getPortafolioData = portafolioData.map((item) => {
-	return {
-		...item,
-		skills: item.skills.map((skill) => skillIcons[skill] || skill),
-	};
+export const getPortafolioData = portafolioData.map((item) => 
+{
+	return {...item, skills: item.skills.map((skill) => skillIcons[skill] || skill),
+		   };
 });
