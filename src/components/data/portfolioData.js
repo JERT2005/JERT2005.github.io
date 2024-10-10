@@ -19,7 +19,7 @@ export const portafolioData =
 		imgSrc: '/img/yamatechColombia.png',
 		title: 'Yamatech Colombia',
 		skills: ['wordpress', 'CSS', 'HTML'],
-		descripcion: 'Yamatech Colombia es un proyecto en el que participé, utilizando WordPress junto con HTML y CSS para crear su presencia en línea. El enfoque fue desarrollar un sitio web atractivo y funcional que refleje la identidad del restaurante y destaque sus servicios y productos de manera efectiva.',
+		descripcion: 'Participé en la creación del sitio web de Yamatech Colombia utilizando WordPress, HTML y CSS. El objetivo fue reflejar la identidad del negocio de manera efectiva a través de una web atractiva y funcional que destaca sus productos y servicios.',
 		repoURL: 'https://yamatechcolombia.com',
 		anim: 'fade-right',
 	},
@@ -27,17 +27,16 @@ export const portafolioData =
 		imgSrc: '/img/excelReferencia.jpg',
 		title: 'Excel Macros',
 		skills: ['Excel'],
-		descripcion: 'Desarrollé un sistema de inventario personalizado para Reencauche utilizando macros en Excel. Este sistema permitió automatizar y agilizar el proceso de seguimiento y gestión de inventario, proporcionando una solución eficiente para mantener un registro preciso de los productos disponibles. La implementación de macros en Excel permitió realizar acciones específicas de forma rápida y automatizada, lo que mejoró significativamente la productividad y la exactitud en la gestión de inventario.',
+		descripcion: 'Desarrollé un sistema automatizado de gestión de inventario para Reencauche con macros en Excel, optimizando el seguimiento de productos y mejorando la eficiencia en los procesos de inventario.',
 		repoURL: '',
 		anim: 'fade-up',
 		averageBrightness: 0.1,
 	},
-	
 	{
 		imgSrc: '/img/AUFINE.png',
 		title: 'Aufine Landing Page',
 		skills: ['Astro', 'CSS', 'JavaScript'],
-		descripcion: 'Actualmente también desarrollando varias landing pages de las marcas de la empresa, una de esas es esta',
+		descripcion: 'Desarrollé la landing page de Aufine Colombia, optimizando la presentación de la marca y sus productos para mejorar la conversión y visibilidad en línea.',
 		repoURL: 'https://aufinecolombia.com',
 		anim: 'fade-right',
 	},
@@ -45,11 +44,12 @@ export const portafolioData =
 		imgSrc: '/img/ROYALBLACK.png',
 		title: 'RoyalBlack Landing Page',
 		skills: ['Astro', 'CSS', 'JavaScript'],
-		descripcion: 'Actualmente también desarrollando varias landing pages de las marcas de la empresa, una de esas es esta',
+		descripcion: 'Diseñé y desarrollé la landing page de RoyalBlack Colombia, enfocándome en una experiencia de usuario fluida para destacar sus productos y captar clientes potenciales.',
 		repoURL: 'https://royalblackcolombia.com',
 		anim: 'fade-left',
 	},
 ];
+
 
 const skillIcons = {
 	JavaScript: 'skill-icons:javascript',
