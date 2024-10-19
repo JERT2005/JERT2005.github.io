@@ -1,13 +1,13 @@
 /**
  * @typedef PortafolioData
- * @property {string} imgSrc Url de la imagen
- * @property {string} title Titulo de la tarjeta
- * @property {string[]} skills Array con tus habilidades ej: ['React', 'CSS', 'JavaScript']
- * @property {string} descripcion La descripcion de la tarjeta
- * @property {string} demoURL Url de una pagina de demostración
- * @property {string} repoURL Url del repositorio, ej: https://github.com/usuario/repo
- * @property {string} anim La animación que se ejecutará cuando se cargue la tarjeta, ej: fade-up, fade-right, fade-left, fade-down
- * @property {number} averageBrightness Cuanto brillo tendrá el color de fondo de la tarjeta, ej: 0.1
+ * @property {string} imgSrc Image URL
+ * @property {string} title Card title
+ * @property {string[]} skills Array of your skills, e.g., ['React', 'CSS', 'JavaScript']
+ * @property {string} description The description of the card
+ * @property {string} demoURL URL for a demo page
+ * @property {string} repoURL URL of the repository, e.g., https://github.com/user/repo
+ * @property {string} anim The animation that will run when the card loads, e.g., fade-up, fade-right, fade-left, fade-down
+ * @property {number} averageBrightness How bright the background color of the card will be, e.g., 0.1
  */
 
 /**
@@ -19,7 +19,7 @@ export const portafolioData =
 		imgSrc: '/img/yamatechColombia.png',
 		title: 'Yamatech Colombia',
 		skills: ['wordpress', 'CSS', 'HTML'],
-		descripcion: 'Participé en la creación del sitio web de Yamatech Colombia utilizando WordPress, HTML y CSS. El objetivo fue reflejar la identidad del negocio de manera efectiva a través de una web atractiva y funcional que destaca sus productos y servicios.',
+		description: 'I participated in creating the website for Yamatech Colombia using WordPress, HTML, and CSS. The goal was to effectively reflect the business identity through an attractive and functional website that highlights its products and services.',
 		repoURL: 'https://yamatechcolombia.com',
 		anim: 'fade-right',
 	},
@@ -27,7 +27,7 @@ export const portafolioData =
 		imgSrc: '/img/excelReferencia.jpg',
 		title: 'Excel Macros',
 		skills: ['Excel'],
-		descripcion: 'Desarrollé un sistema automatizado de gestión de inventario para Reencauche con macros en Excel, optimizando el seguimiento de productos y mejorando la eficiencia en los procesos de inventario.',
+		description: 'I developed an automated inventory management system for Reencauche using Excel macros, optimizing product tracking and improving efficiency in inventory processes.',
 		repoURL: '',
 		anim: 'fade-up',
 		averageBrightness: 0.1,
@@ -36,7 +36,7 @@ export const portafolioData =
 		imgSrc: '/img/AUFINE.png',
 		title: 'Aufine Landing Page',
 		skills: ['Astro', 'CSS', 'JavaScript'],
-		descripcion: 'Desarrollé la landing page de Aufine Colombia, optimizando la presentación de la marca y sus productos para mejorar la conversión y visibilidad en línea.',
+		description: 'I developed the landing page for Aufine Colombia, optimizing the presentation of the brand and its products to improve conversion and online visibility.',
 		repoURL: 'https://aufinecolombia.com',
 		anim: 'fade-right',
 	},
@@ -44,12 +44,11 @@ export const portafolioData =
 		imgSrc: '/img/ROYALBLACK.png',
 		title: 'RoyalBlack Landing Page',
 		skills: ['Astro', 'CSS', 'JavaScript'],
-		descripcion: 'Diseñé y desarrollé la landing page de RoyalBlack Colombia, enfocándome en una experiencia de usuario fluida para destacar sus productos y captar clientes potenciales.',
+		description: 'I designed and developed the landing page for RoyalBlack Colombia, focusing on a smooth user experience to highlight its products and capture potential customers.',
 		repoURL: 'https://royalblackcolombia.com',
 		anim: 'fade-left',
 	},
 ];
-
 
 const skillIcons = {
 	JavaScript: 'skill-icons:javascript',
@@ -59,15 +58,15 @@ const skillIcons = {
 	Tailwind: 'skill-icons:tailwindcss-dark',
 	wordpress: 'skill-icons:wordpress',
 	HTML: 'skill-icons:html',
-	
-
 };
 
 /**
- * @description Se mapea el portafolioData para que tenga los iconos de las habilidades
+ * @description Maps the portfolioData to include skill icons
  */
 export const getPortafolioData = portafolioData.map((item) => 
 {
-	return {...item, skills: item.skills.map((skill) => skillIcons[skill] || skill),
-		   };
+	return {
+		...item,
+		skills: item.skills.map((skill) => skillIcons[skill] || skill),
+	};
 });
