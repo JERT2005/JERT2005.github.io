@@ -22,7 +22,7 @@
 	border-radius: 14px;
 	height: auto;
 	min-height: 7rem;
-	border: 0.03px solid #7c39fd47;
+	border: 0.03px solid #66b3ff;
 	flex-wrap: wrap;
 }
 
@@ -96,13 +96,13 @@
 	.header .header__list {
 		margin-right: 0;
 		z-index: 2;
-		background: #1c0544;
+		background: #66b3ff;
 		justify-content: center;
 		align-items: center;
 		border-radius: 14px;
 		width: 100%;
 		padding: 0.8rem 1rem;
-		border: 1px solid #dc5898;
+		border: 1px solid #007fff;
 		align-self: center;
 		opacity: 0;
 		pointer-events: none;
@@ -141,11 +141,12 @@
 		max-width: max-content;
 		color: #33f3c6;
 		position: absolute;
-		border: 2px solid #33f3c6;
+		border: 2px solid #66b3ff;
 		pointer-events: all;
 		animation: linear scroll-btn;
 		animation-timeline: scroll();
 	}
+	
 }
 
 @keyframes scroll-btn {
@@ -158,3 +159,38 @@
 
 	}
 }
+/* LanguagePicker en pantallas grandes (dentro del nav) */
+.language-picker-desktop {
+	display: none;
+  }
+  
+  /* LanguagePicker en pantallas móviles (al lado del logo) */
+  .language-picker-mobile {
+	display: none;
+	margin-left: 1rem; /* Espacio entre el logo y el selector de idioma */
+  }
+  
+  @media screen and (max-width: 768px) {
+	/* En móviles, muestra el LanguagePicker al lado del logo */
+	.language-picker-mobile {
+	  display: inline-block;
+	  margin-top: 10px;
+	}
+  
+	.language-picker-desktop {
+	  display: none;
+	}
+  }
+  
+  @media screen and (min-width: 769px) {
+	/* En pantallas grandes, muestra el LanguagePicker dentro del nav */
+	.language-picker-desktop {
+	  display: inline-block;
+	}
+  
+	.language-picker-mobile {
+	  display: none;
+	}
+  }
+  
+  
