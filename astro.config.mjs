@@ -9,5 +9,17 @@ export default defineConfig({
   devToolbar: {
     enabled: false
   },
-  integrations: [react(), tailwind(), sitemap()]
+  alias: {
+    styles: './src/styles'
+  },
+  output:'server',
+  integrations: [react(), tailwind(), sitemap()],
+  i18n: {
+    defaultLocale: "en",
+    locales: ["es", "en"],
+    routing: {
+      prefixDefaultLocale: false
+  }
+  
+  }
 });

@@ -1,0 +1,14 @@
+---
+import { languages } from "../in18/ui";
+---
+
+<ul>
+  {Object.entries(languages).map(([lang, { label, flag }]: [string, { label: string; flag: string }]) => (
+    <li  style="list-style: none;">
+      <a href={`/${lang}/`} style="display: flex; align-items: center; text-decoration: none;">
+        <img src={flag} alt={`${label} flag`} width="16" height="16" style="margin-right: 5px;" />
+        {label}
+      </a>
+    </li>
+  ))}
+</ul>

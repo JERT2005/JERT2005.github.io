@@ -1,0 +1,21 @@
+---
+import About from './About/About.astro';
+import { mainMenu } from './data/menuData';
+import Footer from '../../components/Footer/Footer.astro';
+import Header from './header/Header.astro';
+import Hero from './hero/Hero.astro';
+import Portfolio from './Portfolio.astro';
+import Skills from './skills/Skills.astro';
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="Juan Esteban Rendon | Desarrollador de software">
+    <Header origin={mainMenu} />
+    <main class="self-center w-full">
+        <Hero />
+        <About />
+        <Portfolio />
+        <Skills />
+    </main>
+    <Footer/>
+</Layout>

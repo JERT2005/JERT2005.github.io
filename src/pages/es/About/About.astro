@@ -1,0 +1,27 @@
+---
+import SocialIcons from '../../../components/SocialIcons.astro';
+import Title from '../../../components/atoms/Title.astro';
+import '../../../styles/about.css'
+---
+
+<section id="about" class="about">
+	<div class="about__container">
+		<img
+			class="about__img"
+			src="/img/imagenmia2.jpg"
+			alt="Profile photo of Juan Esteban"
+		/>
+
+		<div class="about__content">
+			<Title margin="1rem" contenido="Experiencia Laboral" />
+			<p class="about__text">
+				A lo largo de mi carrera como desarrollador web, he tenido la oportunidad de trabajar en varias empresas donde adquirí una valiosa experiencia. En Choucair Testing, trabajé desde mayo hasta diciembre, especializándome en React.js y adquiriendo un sólido conocimiento en Docker. Mi enfoque principal fue el desarrollo front-end, pero también brindé apoyo en el desarrollo backend y la gestión de bases de datos.
+			</p>
+			<p class="about__text">
+				Hasta agosto de este año, estuve aplicando mis habilidades en Servireencauche. Allí, desarrollé un sistema de inventario utilizando Excel y macros, además de crear páginas de aterrizaje y un comercio electrónico en WordPress para las marcas asociadas con la empresa.
+			</p>
+			
+			<SocialIcons width="25" height="25"/>
+		</div>
+	</div>
+</section>
