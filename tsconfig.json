@@ -4,5 +4,5 @@
     "strictNullChecks": true,
     "allowJs": true
   },
-  "include": ["src/**/*.ts", "src/**/*.astro", "src/components/atoms/languagePicker.jsx", "src/components/in18/ui.js", "src/components/in18/ui.js"]
+  "include": ["src/**/*.ts", "src/**/*.astro", "src/components/in18/ui.js", "src/components/in18/ui.js"]
 }
