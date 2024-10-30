@@ -1,39 +1,40 @@
+# Portafolio con Astro
 
-# Portfolio Template with Astro
+Bienvenido al portafolio creado con Astro. Este template te permite mostrar todos tus proyectos con una interfaz moderna y atractiva. A continuación, encontrarás instrucciones sobre cómo usar este template, cómo agregar nuevos elementos al portafolio y detalles sobre las principales dependencias utilizadas.
 
-Welcome to the Portfolio Template built with Astro! This responsive template allows you to showcase all your projects with an amazing UI. Below you'll find instructions on how to use this template, including how to add new portfolio items, main dependencies, and examples of usage.
 
 ![Portada](image-1.png)
-## Table of Contents
 
-1. [Usage](#usage)
-2. [Portfolio Data Format](#portfolio-data-format)
-3. [Adding Icons with Iconify](#adding-icons-with-iconify)
-4. [Technologies Used](#technologies-used)
-5. [Figma Design](#figma-design)
-6. [Author and License](#author-and-license)
-7. [Bugs and Issues](#bugs-and-issues)
-8. [Homepage](#homepage)
+## Tabla de Contenidos
 
-## Usage
+1. [Uso](#uso)
+2. [Formato de Datos para el Portafolio](#formato-de-datos-para-el-portafolio)
+3. [Agregando Iconos con Iconify](#agregando-iconos-con-iconify)
+4. [Tecnologías Usadas](#tecnologías-usadas)
+5. [Diseño en Figma](#diseño-en-figma)
+6. [Autor y Licencia](#autor-y-licencia)
+7. [Errores e Incidencias](#errores-e-incidencias)
+8. [Página de Inicio](#página-de-inicio)
 
-To add new elements to your portfolio, you need to add them in `/src/data/portfolioData.js`.
+## Uso
 
-## Portfolio Data Format
+Para añadir nuevos elementos a tu portafolio, agrégalos en el archivo `/src/data/portfolioData.js`.
 
-The data for your portfolio should follow this format:
+## Formato de Datos para el Portafolio
+
+Los datos para tu portafolio deben seguir este formato:
 
 ```js
 /**
  * @typedef PortfolioData
- * @property {string} imgSrc - URL of the image
- * @property {string} title - Title of the card
- * @property {string[]} skills - Array of your skills, e.g., ['React', 'CSS', 'JavaScript']
- * @property {string} description - Description of the card
- * @property {string} demoURL - URL of a demo page
- * @property {string} repoURL - URL of the repository, e.g., https://github.com/user/repo
- * @property {string} anim - Animation that will play when the card loads, e.g., fade-up, fade-right, fade-left, fade-down
- * @property {number} averageBrightness - Brightness level of the card's background color, e.g., 0.1
+ * @property {string} imgSrc - URL de la imagen
+ * @property {string} title - Título de la tarjeta
+ * @property {string[]} skills - Array de tus habilidades, e.g., ['React', 'CSS', 'JavaScript']
+ * @property {string} description - Descripción de la tarjeta
+ * @property {string} demoURL - URL de una página demo
+ * @property {string} repoURL - URL del repositorio, e.g., https://github.com/JERT2005/mi-proyecto
+ * @property {string} anim - Animación que se reproducirá al cargar la tarjeta, e.g., fade-up, fade-right
+ * @property {number} averageBrightness - Nivel de brillo del fondo de la tarjeta, e.g., 0.1
  */
 
 /**
@@ -41,25 +42,15 @@ The data for your portfolio should follow this format:
  */
 export const portfolioData = [
     {
-        imgSrc: 'https://dt2sdf0db8zob.cloudfront.net/wp-content/uploads/2021/06/copy-of-the-6-best-restaurant-website-templates-1.png',
-        title: 'Restaurant',
+        imgSrc: 'https://example.com/image.png',
+        title: 'Restaurante',
         skills: ['React', 'StyledComponents'],
-        description: 'Laboris ex laboris mollit esse fugiat aute cillum nostrud enim dolor sit. Reprehenderit et non nulla irure aute nostrud commodo aute.',
-        demoURL: '',
-        repoURL: '',
+        description: 'Descripción del proyecto...',
+        demoURL: 'https://example.com',
+        repoURL: 'https://github.com/JERT2005/mi-proyecto',
         anim: 'fade-right',
     },
-    {
-        imgSrc: 'https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/299377097/original/7eb7dcebe244fcf5ad75d92b0969fc116946bd57/create-professional-amd-responsive-wordpress-website.jpg',
-        title: 'E-commerce',
-        skills: ['JavaScript', 'Bootstrap'],
-        description: 'Laboris ex laboris mollit esse fugiat aute cillum nostrud enim dolor sit. Reprehenderit et non nulla irure aute nostrud commodo aute.',
-        demoURL: '',
-        repoURL: '',
-        anim: 'fade-up',
-        averageBrightness: 0.1,
-    },
-    // Add more portfolio items here
+    // Más proyectos aquí
 ];
 
 const skillIcons = {
@@ -74,77 +65,28 @@ const skillIcons = {
 };
 
 /**
- * @description Maps portfolioData to include skill icons
+ * @description Mapea portfolioData para incluir iconos de habilidades
  */
 export const getPortfolioData = portfolioData.map((item) => ({
     ...item,
     skills: item.skills.map((skill) => skillIcons[skill]),
 }));
-```
+Tecnologías Usadas
+Este template utiliza varias tecnologías modernas para crear un portafolio altamente responsivo y visualmente atractivo:
 
-This data is then passed to the portfolio component as props.
+Astro: Generador de sitios estáticos que permite usar frameworks como React, Vue y Svelte.
+React: Biblioteca de JavaScript para construir interfaces de usuario, permite crear componentes reutilizables.
+Tailwind CSS: Framework de CSS basado en utilidades para diseñar directamente en el marcado.
+Styled Components: Librería para React que permite usar estilos a nivel de componente.
+Iconify: Librería de iconos que proporciona acceso a miles de iconos de diferentes colecciones.
+Diseño en Figma
+Puedes ver y modificar el diseño de este template en Figma. Aquí está el enlace a Figma.
 
-## Adding Icons with Iconify
+Autor y Licencia
+Autor: Juan Esteban Rendon Torres (@JERT2005)
+Licencia: UNLICENCED
+Errores e Incidencias
+Si encuentras algún error o tienes sugerencias, repórtalos aquí.
 
-We use Iconify for icons. To add new icons, use the `icon` attribute.
-
-### Example
-
-To use a React icon:
-
-```html
-<iconify-icon icon="logos:react" width="27" height="27"></iconify-icon>
-```
-
-In `data.js`, specify the icon identifier like this:
-
-```js
-{
-    title: "React",
-    link: "https://reactjs.org/",
-    icon: "logos:react"
-}
-```
-
-### Adding the Iconify Script
-
-Add the Iconify script to the `<head>` section of your project:
-
-```html
-<head>
-    <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
-</head>
-```
-
-Once this script is included, you can use any Iconify icon by specifying its identifier.
-
-## Technologies Used
-
-This template leverages several modern technologies to create a highly responsive and visually appealing portfolio:
-
-- **Astro**: A modern static site builder that allows you to use your favorite frameworks such as React, Vue, and Svelte. It optimizes for performance by shipping less JavaScript.
-- **React**: A JavaScript library for building user interfaces, which allows for the creation of reusable components.
-- **Tailwind CSS**: A utility-first CSS framework that enables you to design directly in your markup, providing flexibility and control over your styling.
-- **Styled Components**: A library for React and React Native that allows you to use component-level styles in your application. It utilizes tagged template literals to style components.
-- **Iconify**: A comprehensive library for icons that provides access to thousands of icons from different collections, all accessible via a single syntax.
-
-## Figma Design
-
-You can view and edit the design of this template on Figma. Here is the [Figma design link](https://www.figma.com/design/15EteAKw8d0QCNCucw5lft/mi-primer-blog?node-id=200-643&t=hbUqn1hqSfLcfI92-0).
-
-## Author and License
-
-- **Author**: SofiDev / Garrux
-- **License**: MIT
-
-## Bugs and Issues
-
-If you encounter any bugs or have issues, please report them [here](https://github.com/SofiDevO/portfolio-astrosofidev-garrux/issues).
-
-## Homepage
-
-For more information and detailed documentation, visit the [homepage](https://github.com/SofiDevO/portfolio-astrosofidev-garrux#readme).
-
----
-
-Enjoy building your portfolio! If you have any questions or run into any issues, feel free to reach out.
+Página de Inicio
+Para más información y documentación detallada, visita la página de inicio del proyecto.
